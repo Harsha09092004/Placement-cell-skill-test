@@ -1,0 +1,201 @@
+/* Import a unique standard font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Welcome Screen Styles */
+#welcomeScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#welcomeScreen h1 {
+    color: #007bff;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+#welcomeScreen button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#welcomeScreen button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Header Styles */
+h1, h2, h3 {
+    color: #007bff;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Panel Styles */
+.panel {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.panel.show {
+    display: block;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Input Styles */
+input[type="text"], input[type="password"], input[type="number"], input[type="date"], input[type="url"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Notification Panel Styles */
+#notificationPanel {
+    padding: 15px;
+    background-color: #e7f1ff;
+    border: 1px solid #b8e0f5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+/* Skill Test Panel Styles */
+#skillTestPanel {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+#skillTestPanel p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#skillTestPanel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skillTestPanel li {
+    margin: 10px 0;
+}
+
+/* Admin Management Styles */
+#studentManagement {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+#studentListContainer, #skillTestListContainer {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .panel {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="password"], input[type="number"], input[type="date"], input[type="url"] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIT Placement Cell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen">
+        <h1>Welcome to RIT Placement Cell</h1>
+        <button onclick="showPortal()">Proceed</button>
+    </div>
+
+    <!-- Portal Selection Screen -->
+    <div id="portalScreen" class="panel">
+        <h2>Select Portal</h2>
+        <button onclick="showLogin('student')">Student Portal</button>
+        <button onclick="showLogin('admin')">Admin Portal</button>
+    </div>
+
+    <!-- Student Login Screen -->
+    <div id="studentLogin" class="panel">
+        <h2>Student Login</h2>
+        <input type="text" id="studentUsername" placeholder="Enter Registration Number">
+        <input type="password" id="studentPassword" placeholder="Enter Contact Number">
+        <button onclick="studentLogin()">Login</button>
+    </div>
+
+    <!-- Admin Login Screen -->
+    <div id="adminLogin" class="panel">
+        <h2>Admin Login</h2>
+        <input type="text" id="adminUsername" placeholder="Enter Staff ID">
+        <input type="password" id="adminPassword" placeholder="Enter Phone Number">
+        <button onclick="adminLogin()">Login</button>
+    </div>
+
+    <!-- Student Panel -->
+    <div id="studentPanel" class="panel" style="display: none;">
+        <h2>Student Dashboard</h2>
+        <div id="notificationPanel"></div>
+        <button onclick="startSkillTest()">Start Skill Test</button>
+        <button onclick="logout()">Logout</button>
+        <div id="skillTestPanel"></div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="panel" style="display: none;">
+        <h2>Admin Dashboard</h2>
+        <button onclick="manageNotifications()">Manage Interview Notifications</button>
+        <button onclick="manageStudents()">Manage Students</button>
+        <button onclick="manageSkillTest()">Manage Skill Test</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Manage Students -->
+    <div id="studentManagement" style="display: none;">
+        <h3>Manage Students</h3>
+        <div class="form-container">
+            <label for="studentRegNo">Registration Number:</label>
+            <input type="text" id="studentRegNo" placeholder="Enter Registration Number">
+            <label for="studentContact">Contact Number:</label>
+            <input type="text" id="studentContact" placeholder="Enter Contact Number">
+            <button onclick="submitStudent()">Add Student</button>
+        </div>
+        <div id="studentListContainer"></div>
+        <button onclick="goBackToAdmin()">Back to Admin Dashboard</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<div id="skillTestPanel"></div>
